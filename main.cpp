@@ -43,16 +43,35 @@ void text_contains() {
     (void)found;
 }
 
+void sum_pair() {
+    int left = 3;
+    int right = 9;
+    int total = left + right;
+    (void)total;
+}
+
+void count_bits() {
+    unsigned int n = 0b10110101u;
+    int bits = 0;
+    while (n != 0) {
+        bits += static_cast<int>(n & 1u);
+        n >>= 1;
+    }
+    (void)bits;
+}
+
 extern "C" int lucid_beacon();
-extern "C" void verdant_signal();
-extern "C" void lunar_signal();
+extern "C" void hidden_boulder();
+extern "C" void calm_crescent();
 
 int main() {
     xor_checksum();
     integer_sqrt();
     sort_small();
     text_contains();
-    verdant_signal();
-    lunar_signal();
+    sum_pair();
+    count_bits();
+    hidden_boulder();
+    calm_crescent();
     return lucid_beacon();
 }

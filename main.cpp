@@ -60,9 +60,27 @@ void count_bits() {
     (void)bits;
 }
 
+void digit_count() {
+    int n = 1234567;
+    int digits = 0;
+    while (n > 0) { digits += 1; n /= 10; }
+    (void)digits;
+}
+
+void digit_sum() {
+    int n = 9081;
+    int total = 0;
+    while (n > 0) {
+        total += n % 10;
+        n /= 10;
+    }
+    (void)total;
+}
+
 extern "C" int lucid_beacon();
-extern "C" void hidden_boulder();
-extern "C" void calm_crescent();
+extern "C" void lunar_ripple();
+extern "C" void still_thicket();
+extern "C" void noble_orbit();
 
 int main() {
     xor_checksum();
@@ -71,7 +89,10 @@ int main() {
     text_contains();
     sum_pair();
     count_bits();
-    hidden_boulder();
-    calm_crescent();
+    digit_count();
+    digit_sum();
+    lunar_ripple();
+    still_thicket();
+    noble_orbit();
     return lucid_beacon();
 }
